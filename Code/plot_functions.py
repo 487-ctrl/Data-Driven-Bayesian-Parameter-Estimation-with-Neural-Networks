@@ -9,12 +9,12 @@ class PlotFunctions:
     def plot_prior_posterior(self, prior, posterior, theta_true):
 
         # label plots
-        labels = ['M', 'Pm', 'Pe']
+        labels = ['m', 'c']
 
         # draw 6 subplots 
         fig, axes = plt.subplots(2,3, figsize=(12,8))  
 
-        for i in range(3):
+        for i in range(2):
 
             # sample 1000 from prior and posterior
             prior_samples = prior.sample((10000,))[:,i]
@@ -39,6 +39,10 @@ class PlotFunctions:
         plt.savefig("prior_posterior_comparison.pdf", format="pdf", bbox_inches="tight")
 
     def plot_simulated_time_frequency(self, simulator_outputs):
+
+        # check if simulator_outputs has more than one dimension
+        if len(simulator_outputs.shape) == 1:
+            simulator_outputs = simulator_outputs.unsqueeze(0)
 
         # extract delta and omega from simulator output
         delta_samples = simulator_outputs[:, 0].cpu().numpy()

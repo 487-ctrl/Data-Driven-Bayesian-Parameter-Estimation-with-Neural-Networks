@@ -1,10 +1,12 @@
 import torch
 
 class SimulatorFunctions:
-    def __init__(self):
-        pass
 
-    # define the swing equation as simulator
+    # init device
+    def __init__(self, device):
+        self.device = device
+
+        # define the swing equation as simulator
     def swing_equation(self, theta):
 
         # select parameters from input vector
@@ -22,8 +24,8 @@ class SimulatorFunctions:
         t = torch.arange(0, t_max, dt) # Zeitvektor
 
         # initialize output vectors
-        delta = torch.zeros((len(theta), len(t))) # Winkelverlauf
-        omega = torch.zeros((len(theta), len(t))) # Geschwindigkeitsverlauf
+        delta = torch.zeros((len(theta), len(t))).to(self.device) # Winkelverlauf
+        omega = torch.zeros((len(theta), len(t))).to(self.device) # Geschwindigkeitsverlauf
 
         # solve swing-equation using the euler method (https://en.wikipedia.org/wiki/Euler_method)
         for i in range(len(t)-1):
@@ -37,36 +39,4 @@ class SimulatorFunctions:
 
         # return speed and angle
         return torch.stack((delta[:,-1], omega[:,-1]), dim=1)
-    
-    # define some linear simulator moddeling a simple linear relationship: y = mx + c
-    def linear(self, theta):
-
-        # theta is a tensor of parameters with shape (num_samples, num_parameters)
-        m = theta[:, 0]  # slope
-        c = theta[:, 1]  # intercept
-        x = torch.linspace(-10, 10, 100)  # input values
-        y = m * x + c  # output values
-        return y
-
-    # define some quadratic simulator moddeling a simple quadratic relationship: y = ax^2 + bx + c
-    def quadratic(self, theta):
-
-        # theta is a tensor of parameters with shape (num_samples, num_parameters)
-        a = theta[:, 0]  # quadratic term coefficient
-        b = theta[:, 1]  # linear term coefficient
-        c = theta[:, 2]  # constant term
-        x = torch.linspace(-10, 10, 100)  # input values
-        y = a * x**2 + b * x + c  # output values
-        return y
-
-    # define some exponential simulator moddeling a simple exponential relationship: y = a * e^(bx)
-    def exponential(self, theta):
-
-        # theta is a tensor of parameters with shape (num_samples, num_parameters)
-        a = theta[:, 0]  # coefficient
-        b = theta[:, 1]  # exponent
-        x = torch.linspace(-10, 10, 100)  # input values
-        y = a * torch.exp(b * x)  # output values
-        return y
-
 
