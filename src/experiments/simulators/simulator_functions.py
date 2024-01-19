@@ -1,43 +1,40 @@
 import torch
 import numpy as np
 
-# Define the simulator function that implements the aggregated Swing equation
-# The inputs are the parameters H and D, and the outputs are the frequency changes
-def swing_equation(theta):
+def swing_equation(theta, dt=0.01, T=10):
+    """
+    This function implements the swing equation using the Euler-Maruyama method 
+    to solve a second-order stochastic differential equation.
+
+    Parameters:
+    theta (tuple): A tuple containing the parameters c_1, c_2, P_const, and epsilon.
+    dt (float): The time step for the Euler-Maruyama method. Default is 0.01.
+    T (float): The total simulation time. Default is 10.
+
+    Returns:
+    torch.Tensor: A tensor containing the frequency changes.
+    """
 
     # Unpack the parameters
-    H, D = theta
+    c_1, c_2, P_const, epsilon = theta
 
-    # Set the constants
-    f_0 = 50 # nominal frequency in Hz
-    S_B = 1000 # total apparent power in MVA
-    P_m = 500 # mechanical power of generators in MW
-    P_L = 400 # electrical power of loads in MW
-    P_loss = 50 # loss power in MW
+    # Define the time span
+    t_span = np.arange(0, T, dt)
 
-    # Set the initial conditions
-    f = f_0 # initial frequency in Hz
-    t = 0 # initial time in s
-    dt = 0.01 # time step in s
-    T = 10 # simulation time in s
+    # Initialize the state variables
+    deltaomega = np.zeros([len(t_span), 2])
 
-    # Initialize the output array
-    output = np.zeros(int(T/dt))
+    # Generate random numbers for the Wiener process
+    dW = np.random.normal(loc=0, scale=np.sqrt(dt), size=[t_span.size, 1])
+
+    # Define the system matrix
+    A = np.array([[1, dt], [-dt * c_2, 1 - dt * c_1]])
 
     # Run the simulation loop
-    for i in range(len(output)):
+    for i in range(1, len(t_span)):
 
-        # Update the frequency change using the aggregated Swing equation
-        f_dot = (f_0 / (2 * H * S_B)) * (P_m - P_L - P_loss - D * f)
+        # Update the state variables using the Euler-Maruyama method
+        deltaomega[i] = np.matmul(A, deltaomega[i-1]) + np.array([0, dt * P_const + epsilon * dW[i, 0]])
 
-        # Update the frequency using Euler's method
-        f = f + f_dot * dt
-
-        # Update the time
-        t = t + dt
-
-        # Store the frequency change in the output array
-        output[i] = f_dot
-        
-    # Return the output array as a tensor
-    return torch.from_numpy(output)
+    # Return the second state variable as a tensor
+    return torch.from_numpy(deltaomega[:, 1])
