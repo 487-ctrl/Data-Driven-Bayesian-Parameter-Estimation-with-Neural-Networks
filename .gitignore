@@ -163,4 +163,4 @@ cython_debug/
 sbi-logs
 
 # Output files
-out_pdf
+pdf_out
