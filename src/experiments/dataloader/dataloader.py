@@ -3,7 +3,38 @@ import zipfile
 import os
 import glob
 
-def download_and_extract(url, location, name):
+# Mapping of dataset names to URLs
+datasets = {
+    'DE_KA01': 'https://osf.io/download/gptxv/',
+    'DE_OL01': 'https://osf.io/download/qz8xr/',
+    'EE01': 'https://osf.io/download/t5ske/',
+    'ES_GC01': 'https://osf.io/download/wz42b/',
+    'ES_GC02': 'https://osf.io/download/rukat/',
+    'ES_PM01': 'https://osf.io/download/2qn9k/',
+    'ES_PM02': 'https://osf.io/download/vrc6a/',
+    'ES_PM03': 'https://osf.io/download/7xe5r/',
+    'FO01': 'https://osf.io/download/a7h5b/',
+    'FR01': 'https://osf.io/download/hfsrz/',
+    'GB01': 'https://osf.io/download/cfv47/',
+    'GB02': 'https://osf.io/download/h5ydu/',
+    'HR01': 'https://osf.io/download/r9eh6/',
+    'IS01': 'https://osf.io/download/sxph8/',
+    'IT01': 'https://osf.io/download/c754b/',
+    'PL01': 'https://osf.io/download/wq3te/',
+    'PT01': 'https://osf.io/download/5zgwn/',
+    'PT_LI01': 'https://osf.io/download/jt84d/',
+    'RU01': 'https://osf.io/download/tvsyc/',
+    'SE01': 'https://osf.io/download/e2xfb/',
+    'sync01': 'https://osf.io/download/p5xyr/',
+    'TUR_IS01': 'https://osf.io/download/3kwgv/',
+    'US_TX01': 'https://osf.io/download/t5wxz/',
+    'US_TX02': 'https://osf.io/download/zngy8/',
+    'US_UT': 'https://osf.io/download/8rp4v/',
+    'ZA01': 'https://osf.io/download/gzk7d/',
+
+}
+
+def _download_and_extract(url, location, name):
     """
     This function downloads a file from a URL, saves it to a specified location,
     extracts it if it's a zip file, and deletes the zip file.
@@ -49,9 +80,37 @@ def download_and_extract(url, location, name):
     # Print only the final CSV file path
     print(f"Data downloaded and saved as {filename.replace('.zip', '.csv')}")
 
-DE_KA01 = 'https://osf.io/download/gptxv/'
-DE_OL01 = 'https://osf.io/download/qz8xr/'
-EE01 = 'https://osf.io/download/t5ske/'
+def fetch_data(name, out_dir='frequency_data'):
+    """
+    This function fetches a dataset given its name and saves it to a specified location.
 
-download_and_extract(DE_KA01, "frequency_data", "DE_KA01")
+    Parameters:
+    name (str): The name of the dataset to be downloaded. It should be a key in the 'datasets' dictionary.
+    out_dir (str): The directory where the dataset should be saved. Defaults to 'frequency_data'.
+    """
 
+    # Check if the dataset name is valid
+    if name not in datasets:
+        print(f"Unknown dataset name: {name}")
+        return
+
+    # Get the URL for the dataset
+    url = datasets[name]
+
+    # Call the download_and_extract function
+    _download_and_extract(url, out_dir, name)
+
+def get_dataset_options():
+    """
+    This function returns the available dataset options.
+
+    Returns:
+    A list of strings, each string is a dataset name.
+    """
+
+    # Get the keys from the 'datasets' dictionary
+    # These keys are the names of the available datasets
+    dataset_names = list(datasets.keys())
+
+    return dataset_names
+    
