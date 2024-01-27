@@ -1,7 +1,6 @@
 import requests
 import zipfile
 import os
-import glob
 
 # Mapping of dataset names to URLs
 datasets = {
@@ -37,7 +36,7 @@ datasets = {
 def _download_and_extract(url, location, name):
     """
     This function downloads a file from a URL, saves it to a specified location,
-    extracts it if it's a zip file, and deletes the zip file.
+    extracts it if it's a zip file, deletes the zip file, and renames the CSV file.
 
     Parameters:
     url (str): The URL of the file to be downloaded.
@@ -67,20 +66,20 @@ def _download_and_extract(url, location, name):
         with zipfile.ZipFile(filename, 'r') as zip_ref:
             zip_ref.extractall(location)
 
+            # Find the CSV file and rename it
+            for file in zip_ref.namelist():
+                if file.endswith('.csv'):
+                    csv_file = os.path.join(location, file)
+                    new_csv_file = os.path.join(location, name + '.csv')
+                    os.rename(csv_file, new_csv_file)
+
         # Delete the zip file
         os.remove(filename) 
 
-        # Find the CSV file
-        csv_file = glob.glob(os.path.join(location, '*.csv'))[0]
-
-        # Rename the CSV file
-        new_csv_file = os.path.join(location, name + '.csv')
-        os.rename(csv_file, new_csv_file)
-
     # Print only the final CSV file path
-    print(f"Data downloaded and saved as {filename.replace('.zip', '.csv')}")
+    print(f"Data downloaded and saved as {os.path.join(location, name + '.csv')}")
 
-def fetch_data(name, out_dir='frequency_data'):
+def fetch_dataset(name, out_dir='frequency_data'):
     """
     This function fetches a dataset given its name and saves it to a specified location.
 
@@ -100,7 +99,7 @@ def fetch_data(name, out_dir='frequency_data'):
     # Call the download_and_extract function
     _download_and_extract(url, out_dir, name)
 
-def get_dataset_options():
+def _get_dataset_options():
     """
     This function returns the available dataset options.
 
@@ -113,4 +112,24 @@ def get_dataset_options():
     dataset_names = list(datasets.keys())
 
     return dataset_names
-    
+
+# Fetches about 20 GB of data, do not use frequently!
+def fetch_all_datasets(out_dir='frequency_data'):
+    """
+    This function fetches all available datasets and saves them to a specified location.
+
+    Parameters:
+    out_dir (str): The directory where the datasets should be saved. Defaults to 'frequency_data'.
+    """
+
+    # Get the names of all available datasets
+    dataset_names = _get_dataset_options()
+
+    # Fetch each dataset
+    for name in dataset_names:
+        print(f"Fetching dataset: {name}")
+        fetch_dataset(name, out_dir)
+
+    print("All datasets fetched successfully.")
+
+fetch_all_datasets()
