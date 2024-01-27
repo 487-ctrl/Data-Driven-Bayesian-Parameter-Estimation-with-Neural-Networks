@@ -163,4 +163,5 @@ cython_debug/
 sbi-logs
 
 # Output files
-pdf_out
+figure_out
+frequency_data
