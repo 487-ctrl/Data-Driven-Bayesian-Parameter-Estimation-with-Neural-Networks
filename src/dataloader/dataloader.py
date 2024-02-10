@@ -1,6 +1,8 @@
 import requests
 import zipfile
 import os
+import csv
+import datetime
 
 # Mapping of dataset names to URLs
 datasets = {
@@ -132,4 +134,73 @@ def fetch_all_datasets(out_dir='frequency_data'):
 
     print("All datasets fetched successfully.")
 
-fetch_all_datasets()
+def read_csv(filename):
+    """
+    This function reads a CSV file with the following format and returns the first two columns as lists. The last column can be ignored.
+
+    Time;Frequency;Interpolated
+    2019-07-08 23:59:59.1;-12.785;0
+    2019-07-08 23:59:59.2;-14.766;0
+    2019-07-08 23:59:59.3;-13.134;0
+    2019-07-08 23:59:59.4;-13.578;0
+
+    Parameters:
+    filename (str): The name of the CSV file.
+
+    Return values:
+    time (list): A list of time values as strings.
+    frequency (list): A list of frequency values as strings.
+    """
+    # Create two empty lists for the time and frequency values
+    time = []
+    frequency_data = []
+
+    # Open the file in read mode
+    with open(filename, "r") as file:
+
+        # Create a csv reader with the semicolon as the delimiter
+        reader = csv.reader(file, delimiter=";")
+
+        # Skip the header row
+        next(reader)
+
+        # Loop through each row in the file
+        for row in reader:
+
+            # Add the time value to the time list
+            time.append(row[0])
+
+            # Add the frequency value to the frequency list
+            frequency_data.append(row[1])
+
+    # Return the two lists
+    return _convert_time(time), frequency_data
+
+def _convert_time(time):
+    """
+    This function converts a list of time values in the format '2019-07-08 23:59:59.1' to a list of seconds since January 1, 1970.
+
+    Parameters:
+    time (list): A list of time values as strings.
+
+    Return values:
+    converted (list): A list of converted time values as floats.
+    """
+
+    # Create an empty list for the converted values
+    converted = []
+
+    # Loop through each time in the list
+    for t in time:
+
+        # Create a datetime object from the string
+        dt = datetime.datetime.strptime(t, "%Y-%m-%d %H:%M:%S.%f")
+
+        # Get the number of seconds since January 1, 1970
+        seconds = dt.timestamp()
+
+        # Add the value to the converted list
+        converted.append(seconds)
+
+    # Return the converted list
+    return converted

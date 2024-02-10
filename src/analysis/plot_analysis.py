@@ -58,3 +58,20 @@ def simulation_plot_animation(simulator, theta, simulator_name, dt=0.01, T=10):
     for filename in images:
         os.remove(filename)
     os.rmdir('../../../figure_out/gif/temp_images')
+
+def plot_frequency_data(time, frequency, dataset_name):
+
+    # Convert the data to numeric values
+    time = [float(t) for t in time]
+    frequency = [float(f) for f in frequency]
+
+    # Plot the data as a line graph
+    plt.plot(time, frequency)
+
+    # Add labels and title
+    plt.xlabel("Time in (s)")
+    plt.ylabel("Frequency in (Hz)")
+    plt.title(f"Data from {dataset_name}")
+
+    # Show the plot
+    plt.show()
