@@ -1,80 +1,77 @@
+import numpy as np
 import torch
 
-def _swing_equation(t, omega, theta, parameters):
+# Formulation with 5 parameters c_1, c_2, P_0, P_1 and epsilon
+def swing_equation(theta, dt=0.01, T=10):
     """
-    Represents the swing equation in power systems.
-    
-    Args:
-    - t (torch.Tensor): Time.
-    - omega (torch.Tensor): Angular velocity.
-    - theta (torch.Tensor): Rotor angle.
-    - parameters (tuple): Tuple of parameters (c1, c2, P0, P1, epsilon).
-    
+    This function implements the swing equation using the Euler-Maruyama method 
+    to solve a second-order stochastic differential equation.
+
+    Parameters:
+        theta (tuple): A tuple containing the parameters c_1, c_2, P_const, and epsilon.
+        dt (float): The time step for the Euler-Maruyama method. Default is 0.01.
+        T (float): The total simulation time. Default is 10.
+
     Returns:
-    - torch.Tensor: Derivative of the angular velocity.
+        torch.Tensor: A tensor containing the frequency changes.
     """
     # Unpack the parameters
-    c1, c2, P0, P1, epsilon = parameters
+    c1, c2, P0, P1, epsilon = theta
 
-    # Define the swing equation incorporating time and theta
-    domega_dt = c1 * omega + c2 * theta + P0 + P1 * t + epsilon
+    # Define the time span
+    t_span = np.arange(0, T, dt)
 
-    return domega_dt
+    # Initialize the state variables
+    deltaomega = np.zeros([len(t_span), 2])
 
-def _euler_maruyama(t_span, initial_conditions, dt, parameters, equation):
+    # Generate random numbers for the Wiener process
+    dW = np.random.normal(loc=0, scale=np.sqrt(dt), size=[t_span.size, 1])
+
+    # Define the system matrix
+    A = np.array([[1, dt], [-dt * c2, 1 - dt * c1]])
+
+    # Run the simulation loop
+    for i in range(1, len(t_span)):
+        # Update the state variables using the Euler-Maruyama method
+        deltaomega[i] = np.matmul(A, deltaomega[i-1]) + np.array([0, dt * P0 + P1 + epsilon * dW[i, 0]])
+
+    # Return the second state variable as a tensor
+    return torch.from_numpy(deltaomega[:, 1])
+
+# Alternative formulation with 4 parameters c_1, c_2, P_const, and epsilon
+def swing_equation_alt(theta, dt=0.01, T=10):
     """
-    Approximates the solution of a stochastic differential equation (SDE) using Euler-Maruyama method.
-    
-    Args:
-    - t_span (tuple): A tuple (t_start, t_end) specifying the time span.
-    - initial_conditions (tuple): Tuple of initial conditions (initial_omega, initial_theta).
-    - dt (float): The time step size.
-    - parameters (tuple): Parameters required by the equation.
-    - equation (callable): The function representing the SDE.
-    
+    This function implements the swing equation using the Euler-Maruyama method 
+    to solve a second-order stochastic differential equation.
+
+    Parameters:
+    theta (tuple): A tuple containing the parameters c_1, c_2, P_const, and epsilon.
+    dt (float): The time step for the Euler-Maruyama method. Default is 0.01.
+    T (float): The total simulation time. Default is 10.
+
     Returns:
-    - tuple: A tuple containing arrays of time points and corresponding approximated solutions.
+    torch.Tensor: A tensor containing the frequency changes.
     """
-    t = torch.arange(t_span[0], t_span[1], dt)
-    num_steps = len(t)
-    
-    # Initialize solution arrays
-    omega = torch.zeros(num_steps)
-    theta = torch.zeros(num_steps)
-    
-    # Set initial conditions
-    omega[0], theta[0] = initial_conditions
-    
-    for i in range(num_steps - 1):
-        
-        # Generate Gaussian white noise for epsilon
-        epsilon = torch.normal(0, torch.sqrt(torch.tensor(dt)))
-        
-        # Compute derivative of the solution at current time step
-        domega_dt = equation(t[i], omega[i], theta[i], parameters)
-        
-        # Update solution using Euler-Maruyama method
-        omega[i+1] = omega[i] + domega_dt * dt
-        
-    return t, omega
+    # Unpack the parameters
+    c_1, c_2, P_const, epsilon = theta
 
-def simulator(parameters, initial_conditions=(0.0, 0.0), T=10, dt=0.1):
-    """
-    Simulator function for the swing equation.
-    
-    Args:
-    - parameters (tuple): Parameters required for simulation (c1, c2, P0, P1, epsilon).
-    - initial_conditions (tuple): Initial conditions for angular velocity and rotor angle (initial_omega, initial_theta).
-    - T (float): Total time of simulation.
-    - dt (float): Time step size.
-    
-    Returns:
-    - torch.Tensor: Simulated angular velocities over time.
-    """
+    # Define the time span
+    t_span = np.arange(0, T, dt)
 
-    # Define simulation time span
-    t_span = (0, T)  
+    # Initialize the state variables
+    deltaomega = np.zeros([len(t_span), 2])
 
-    t, omega = _euler_maruyama(t_span, initial_conditions, dt, parameters, _swing_equation)
-    
-    return omega 
+    # Generate random numbers for the Wiener process
+    dW = np.random.normal(loc=0, scale=np.sqrt(dt), size=[t_span.size, 1])
+
+    # Define the system matrix
+    A = np.array([[1, dt], [-dt * c_2, 1 - dt * c_1]])
+
+    # Run the simulation loop
+    for i in range(1, len(t_span)):
+
+        # Update the state variables using the Euler-Maruyama method
+        deltaomega[i] = np.matmul(A, deltaomega[i-1]) + np.array([0, dt * P_const + epsilon * dW[i, 0]])
+
+    # Return the second state variable as a tensor
+    return torch.from_numpy(deltaomega[:, 1])
