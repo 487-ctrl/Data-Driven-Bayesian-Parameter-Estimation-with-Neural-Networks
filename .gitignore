@@ -167,3 +167,5 @@ figure_out
 frequency_data
 archive/
 results/
+venv
+.venv
