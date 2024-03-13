@@ -163,9 +163,9 @@ cython_debug/
 sbi-logs
 
 # Output files
-figure_out
-frequency_data
-archive/
-results/
-venv
-.venv
+archive
+results
+scripts
+dataset/
+.out
+.csv
