@@ -1,0 +1,177 @@
+[NbConvertApp] Converting notebook notebooks/hyperparameter_choices/num_simulations.ipynb to notebook
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/simulator/sde_base.py:52: RuntimeWarning: invalid value encountered in add
+  X[:, i+1] = X[:, i] + self._a(X[:, i], t[i], parameters) * self.dt + self._b(X[:, i], t[i], parameters) * dW
+[NbConvertApp] Writing 772425 bytes to notebooks/hyperparameter_choices/num_simulations.ipynb
+
+============================= JOB FEEDBACK =============================
+
+NodeName=uc2n512
+Job ID: 23251114
+Cluster: uc2
+User/Group: ik6649/iai
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 40
+CPU Utilized: 05:28:06
+CPU Efficiency: 34.85% of 15:41:20 core-walltime
+Job Wall-clock time: 00:23:32
+Memory Utilized: 22.62 GB
+Memory Efficiency: 57.92% of 39.06 GB

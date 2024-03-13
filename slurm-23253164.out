@@ -1,0 +1,91 @@
+[NbConvertApp] Converting notebook notebooks/hyperparameter_choices/prior_noise.ipynb to notebook
+Traceback (most recent call last):
+  File "/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/.venv/bin/jupyter-nbconvert", line 8, in <module>
+    sys.exit(main())
+  File "/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/.venv/lib64/python3.9/site-packages/jupyter_core/application.py", line 283, in launch_instance
+    super().launch_instance(argv=argv, **kwargs)
+  File "/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/.venv/lib64/python3.9/site-packages/traitlets/config/application.py", line 1075, in launch_instance
+    app.start()
+  File "/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/.venv/lib64/python3.9/site-packages/nbconvert/nbconvertapp.py", line 420, in start
+    self.convert_notebooks()
+  File "/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/.venv/lib64/python3.9/site-packages/nbconvert/nbconvertapp.py", line 597, in convert_notebooks
+    self.convert_single_notebook(notebook_filename)
+  File "/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/.venv/lib64/python3.9/site-packages/nbconvert/nbconvertapp.py", line 563, in convert_single_notebook
+    output, resources = self.export_single_notebook(
+  File "/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/.venv/lib64/python3.9/site-packages/nbconvert/nbconvertapp.py", line 487, in export_single_notebook
+    output, resources = self.exporter.from_filename(
+  File "/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/.venv/lib64/python3.9/site-packages/nbconvert/exporters/exporter.py", line 201, in from_filename
+    return self.from_file(f, resources=resources, **kw)
+  File "/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/.venv/lib64/python3.9/site-packages/nbconvert/exporters/exporter.py", line 220, in from_file
+    return self.from_notebook_node(
+  File "/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/.venv/lib64/python3.9/site-packages/nbconvert/exporters/notebook.py", line 36, in from_notebook_node
+    nb_copy, resources = super().from_notebook_node(nb, resources, **kw)
+  File "/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/.venv/lib64/python3.9/site-packages/nbconvert/exporters/exporter.py", line 154, in from_notebook_node
+    nb_copy, resources = self._preprocess(nb_copy, resources)
+  File "/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/.venv/lib64/python3.9/site-packages/nbconvert/exporters/exporter.py", line 353, in _preprocess
+    nbc, resc = preprocessor(nbc, resc)
+  File "/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/.venv/lib64/python3.9/site-packages/nbconvert/preprocessors/base.py", line 48, in __call__
+    return self.preprocess(nb, resources)
+  File "/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/.venv/lib64/python3.9/site-packages/nbconvert/preprocessors/execute.py", line 102, in preprocess
+    self.preprocess_cell(cell, resources, index)
+  File "/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/.venv/lib64/python3.9/site-packages/nbconvert/preprocessors/execute.py", line 123, in preprocess_cell
+    cell = self.execute_cell(cell, index, store_history=True)
+  File "/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/.venv/lib64/python3.9/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+  File "/usr/lib64/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/.venv/lib64/python3.9/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/.venv/lib64/python3.9/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+distribution_analysis = DistributionAnalysis(true_parameters, output_path)
+
+proposal_samples = proposal.sample((number_samples,))
+prior_samples = prior.sample((number_samples,))
+posterior_samples = posterior.sample((number_samples,))
+
+proposal_plot = distribution_analysis.plot_distribution_analytics(proposal_samples, fr'Proposed ~ $U(-10*\mu, 10*\mu)$', 'proposal')
+prior_plot = distribution_analysis.plot_distribution_analytics(prior_samples, fr'Prior ~ $N({mean_noise_scale}*\mu + {mean_noise_constant}, ({std_noise_scale}*\sigma + {std_noise_constant})^2)$', 'prior_noise')
+posterior_plot = distribution_analysis.plot_distribution_analytics(posterior_samples, 'Posterior', 'posterior')
+------------------
+
+----- stderr -----
+/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/analysis/distribution_analysis.py:162: UserWarning: The use of `x.T` on tensors of dimension other than 2 to reverse their shape is deprecated and it will throw an error in a future release. Consider `x.mT` to transpose batches of matrices or `x.permute(*torch.arange(x.ndim - 1, -1, -1))` to reverse the dimensions of a tensor. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3637.)
+  return [s.mean().item() for s in samples.T]
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mTypeError[0m                                 Traceback (most recent call last)
+Cell [0;32mIn[8], line 7[0m
+[1;32m      4[0m prior_samples [38;5;241m=[39m prior[38;5;241m.[39msample((number_samples,))
+[1;32m      5[0m posterior_samples [38;5;241m=[39m posterior[38;5;241m.[39msample((number_samples,))
+[0;32m----> 7[0m proposal_plot [38;5;241m=[39m [43mdistribution_analysis[49m[38;5;241;43m.[39;49m[43mplot_distribution_analytics[49m[43m([49m[43mproposal_samples[49m[43m,[49m[43m [49m[38;5;124;43mfr[39;49m[38;5;124;43m'[39;49m[38;5;124;43mProposed ~ $U(-10*[39;49m[38;5;124;43m\[39;49m[38;5;124;43mmu, 10*[39;49m[38;5;124;43m\[39;49m[38;5;124;43mmu)$[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[38;5;124;43m'[39;49m[38;5;124;43mproposal[39;49m[38;5;124;43m'[39;49m[43m)[49m
+[1;32m      8[0m prior_plot [38;5;241m=[39m distribution_analysis[38;5;241m.[39mplot_distribution_analytics(prior_samples, [38;5;124mfr[39m[38;5;124m'[39m[38;5;124mPrior ~ $N([39m[38;5;132;01m{[39;00mmean_noise_scale[38;5;132;01m}[39;00m[38;5;124m*[39m[38;5;124m\[39m[38;5;124mmu + [39m[38;5;132;01m{[39;00mmean_noise_constant[38;5;132;01m}[39;00m[38;5;124m, ([39m[38;5;132;01m{[39;00mstd_noise_scale[38;5;132;01m}[39;00m[38;5;124m*[39m[38;5;124m\[39m[38;5;124msigma + [39m[38;5;132;01m{[39;00mstd_noise_constant[38;5;132;01m}[39;00m[38;5;124m)^2)$[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mprior_noise[39m[38;5;124m'[39m)
+[1;32m      9[0m posterior_plot [38;5;241m=[39m distribution_analysis[38;5;241m.[39mplot_distribution_analytics(posterior_samples, [38;5;124m'[39m[38;5;124mPosterior[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mposterior[39m[38;5;124m'[39m)
+
+File [0;32m/pfs/data5/home/kit/iai/ik6649/Data-Driven-Bayesian-Parameter-Estimation-with-Neural-Networks/notebooks/hyperparameter_choices/../../utilities/analysis/distribution_analysis.py:69[0m, in [0;36mDistributionAnalysis.plot_distribution_analytics[0;34m(self, distribution_samples, title, filename, confidence_interval, metrics)[0m
+[1;32m     67[0m     ax[38;5;241m.[39mtext([38;5;241m0.05[39m, [38;5;241m0.95[39m, [38;5;124mf[39m[38;5;124m'[39m[38;5;124mSkewness: [39m[38;5;132;01m{[39;00m[38;5;28mself[39m[38;5;241m.[39m_skewness(samples)[38;5;250m [39m[38;5;132;01m:[39;00m[38;5;124m.2f[39m[38;5;132;01m}[39;00m[38;5;124m'[39m, fontsize[38;5;241m=[39m[38;5;241m8[39m, ha[38;5;241m=[39m[38;5;124m'[39m[38;5;124mleft[39m[38;5;124m'[39m, va[38;5;241m=[39m[38;5;124m'[39m[38;5;124mtop[39m[38;5;124m'[39m, transform[38;5;241m=[39max[38;5;241m.[39mtransAxes, color[38;5;241m=[39m[38;5;124m'[39m[38;5;124mblack[39m[38;5;124m'[39m)
+[1;32m     68[0m     ax[38;5;241m.[39mtext([38;5;241m0.05[39m, [38;5;241m0.90[39m, [38;5;124mf[39m[38;5;124m'[39m[38;5;124mKurtosis: [39m[38;5;132;01m{[39;00m[38;5;28mself[39m[38;5;241m.[39m_kurtosis(samples)[38;5;132;01m:[39;00m[38;5;124m.2f[39m[38;5;132;01m}[39;00m[38;5;124m'[39m, fontsize[38;5;241m=[39m[38;5;241m8[39m, ha[38;5;241m=[39m[38;5;124m'[39m[38;5;124mleft[39m[38;5;124m'[39m, va[38;5;241m=[39m[38;5;124m'[39m[38;5;124mtop[39m[38;5;124m'[39m, transform[38;5;241m=[39max[38;5;241m.[39mtransAxes, color[38;5;241m=[39m[38;5;124m'[39m[38;5;124mblack[39m[38;5;124m'[39m)
+[0;32m---> 69[0m     ax[38;5;241m.[39mtext([38;5;241m0.95[39m, [38;5;241m0.95[39m, [38;5;124mf[39m[38;5;124m'[39m[38;5;124mMean: [39m[38;5;132;01m{[39;00m[38;5;28mself[39m[38;5;241m.[39m_mean(samples)[38;5;132;01m:[39;00m[38;5;124m.2f[39m[38;5;132;01m}[39;00m[38;5;124m'[39m, fontsize[38;5;241m=[39m[38;5;241m8[39m, ha[38;5;241m=[39m[38;5;124m'[39m[38;5;124mright[39m[38;5;124m'[39m, va[38;5;241m=[39m[38;5;124m'[39m[38;5;124mtop[39m[38;5;124m'[39m, transform[38;5;241m=[39max[38;5;241m.[39mtransAxes, color[38;5;241m=[39m[38;5;124m'[39m[38;5;124mblack[39m[38;5;124m'[39m)
+[1;32m     70[0m     ax[38;5;241m.[39mtext([38;5;241m0.95[39m, [38;5;241m0.90[39m, [38;5;124mf[39m[38;5;124m'[39m[38;5;124mStd: [39m[38;5;132;01m{[39;00m[38;5;28mself[39m[38;5;241m.[39m_std(samples)[38;5;132;01m:[39;00m[38;5;124m.2f[39m[38;5;132;01m}[39;00m[38;5;124m'[39m, fontsize[38;5;241m=[39m[38;5;241m8[39m, ha[38;5;241m=[39m[38;5;124m'[39m[38;5;124mright[39m[38;5;124m'[39m, va[38;5;241m=[39m[38;5;124m'[39m[38;5;124mtop[39m[38;5;124m'[39m, transform[38;5;241m=[39max[38;5;241m.[39mtransAxes, color[38;5;241m=[39m[38;5;124m'[39m[38;5;124mblack[39m[38;5;124m'[39m)
+[1;32m     72[0m [38;5;66;03m# Add grid to x-axis[39;00m
+
+[0;31mTypeError[0m: unsupported format string passed to list.__format__
+
+
+============================= JOB FEEDBACK =============================
+
+NodeName=uc2n482
+Job ID: 23253164
+Cluster: uc2
+User/Group: ik6649/iai
+State: FAILED (exit code 1)
+Nodes: 1
+Cores per node: 40
+CPU Utilized: 00:39:01
+CPU Efficiency: 18.94% of 03:26:00 core-walltime
+Job Wall-clock time: 00:05:09
+Memory Utilized: 21.53 GB
+Memory Efficiency: 55.11% of 39.06 GB
